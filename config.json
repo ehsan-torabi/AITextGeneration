@@ -2,7 +2,7 @@
   "total_samples": 5000,
   "max_workers": 20,
   "buffer_size": 5,
-  "csv_filename": "data/persian_ai_generated_dataset4.csv",
+  "csv_filename": "data/raw/persian_ai_generated_dataset4.csv",
   "topics_file": "topics.txt",
   "proxy_url": "http://127.0.0.1:10808",
   "providers": {
