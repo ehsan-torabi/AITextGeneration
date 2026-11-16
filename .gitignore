@@ -1,0 +1,23 @@
+# --- Python -----------------------------------------------------------------
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# --- Secrets: never commit keys ---------------------------------------------
+.env
+
+# --- IDE / local tooling state ------------------------------------------------
+.idea/
+.zcode/
+node_modules/
+
+# --- Datasets are large, live locally ----------------------------------------
+*.csv
+
+# --- Leftovers from AITextDetection (other project's file, kept locally) -----
+models.json
+
+# --- Personal VPN config (not part of the project) ----------------------------
+aether*.toml

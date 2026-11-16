@@ -1,0 +1,44 @@
+[project]
+name = "aitextgeneration"
+version = "1.0.0"
+description = "Generate a Persian AI-generated text dataset by sampling free OpenAI-compatible chat endpoints."
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.60",
+    "httpx>=0.28",
+    "pandas>=2.2",
+    "python-dotenv>=1.0",
+    "pyperclip>=1.9",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ipykernel>=6.29"]
+
+# Unified code style for all Python code in this repo.
+# Enforce with:  uvx ruff format .  &&  uvx ruff check --fix .
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+# Python only: ruff's default include also picks up Markdown.
+include = ["*.py", "*.pyi"]
+extend-exclude = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = [
+    "E4",  # pycodestyle errors
+    "E7",  # pycodestyle (comparison/statements)
+    "E9",  # runtime errors (syntax, undefined names)
+    "F",   # pyflakes
+    "I",   # import sorting
+    "W",   # whitespace
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "RUF", # ruff-specific rules
+]
+ignore = [
+    # Persian text is legitimate here, not a confusable-unicode typo.
+    "RUF001", "RUF002", "RUF003",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
