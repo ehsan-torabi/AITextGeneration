@@ -8,16 +8,14 @@ __pycache__/
 # --- Secrets: never commit keys ---------------------------------------------
 .env
 
-# --- IDE / local tooling state ------------------------------------------------
+# --- IDE / local tooling state ----------------------------------------------
 .idea/
 .zcode/
 node_modules/
 
-# --- Datasets are large, live locally ----------------------------------------
+# --- Generated datasets and runtime outputs ---------------------------------
+data/
 *.csv
 
 # --- Leftovers from AITextDetection (other project's file, kept locally) -----
 models.json
-
-# --- Personal VPN config (not part of the project) ----------------------------
-aether*.toml

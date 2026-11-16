@@ -12,14 +12,13 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["pytest>=8.0", "ipykernel>=6.29"]
+dev = ["pytest>=8.0"]
 
 # Unified code style for all Python code in this repo.
 # Enforce with:  uvx ruff format .  &&  uvx ruff check --fix .
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-# Python only: ruff's default include also picks up Markdown.
 include = ["*.py", "*.pyi"]
 extend-exclude = ["*.ipynb"]
 
